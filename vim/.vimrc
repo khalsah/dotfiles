@@ -35,3 +35,6 @@ let g:ctrlp_show_hidden = 1
 
 " jsx
 let g:jsx_ext_required = 0
+
+" airline
+let g:airline_powerline_fonts = 1
