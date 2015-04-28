@@ -55,3 +55,9 @@
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim/bundle/vim-less"]
+	path = vim/.vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less
+[submodule "vim/.vim/bundle/editorconfig-vim"]
+	path = vim/.vim/bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
