@@ -9,11 +9,9 @@ set shiftwidth=2
 
 set number
 
-syntax enable
 set t_Co=16
 set background=light
 colorscheme solarized
-filetype plugin indent on
 
 set mouse=a
 set spell
@@ -23,6 +21,8 @@ set wildmode=longest,list,full
 set whichwrap+=<,>,h,l,[,]
 
 set wildignore+=node_modules,bower_components,coverage
+
+set clipboard=unnamed
 
 " Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l)
 map <C-j> <C-W>j
