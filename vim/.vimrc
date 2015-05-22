@@ -38,3 +38,9 @@ let g:jsx_ext_required = 0
 
 " airline
 let g:airline_powerline_fonts = 1
+
+" neocomplete
+source ~/.vim/neocomplete.vim
+
+" neosnippet
+source ~/.vim/neosnippet.vim
