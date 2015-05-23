@@ -24,12 +24,6 @@ set wildignore+=node_modules,bower_components,coverage
 
 set clipboard=unnamed
 
-" Better split switching (Ctrl-j, Ctrl-k, Ctrl-h, Ctrl-l)
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-H> <C-W>h
-map <C-L> <C-W>l
-
 " CtrlP
 let g:ctrlp_show_hidden = 1
 
