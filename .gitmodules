@@ -73,3 +73,6 @@
 [submodule "vim/.vim/bundle/vim-tmux-navigator"]
 	path = vim/.vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "vim/.vim/bundle/vim-trailing-whitespace"]
+	path = vim/.vim/bundle/vim-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace
