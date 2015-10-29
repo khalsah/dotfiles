@@ -57,7 +57,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/.vim/bundle/vim-less"]
 	path = vim/.vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less
+	url = https://github.com/groenewege/vim-less.git
 [submodule "vim/.vim/bundle/editorconfig-vim"]
 	path = vim/.vim/bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
@@ -75,4 +75,19 @@
 	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "vim/.vim/bundle/vim-trailing-whitespace"]
 	path = vim/.vim/bundle/vim-trailing-whitespace
-	url = https://github.com/bronson/vim-trailing-whitespace
+	url = https://github.com/bronson/vim-trailing-whitespace.git
+[submodule "vim/.vim/bundle/vim-dispatch"]
+	path = vim/.vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim/.vim/bundle/vim-unimpaired"]
+	path = vim/.vim/bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/.vim/bundle/vim-repeat"]
+	path = vim/.vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/.vim/bundle/vim-ruby"]
+	path = vim/.vim/bundle/vim-ruby
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "vim/.vim/bundle/vim-test"]
+	path = vim/.vim/bundle/vim-test
+	url = https://github.com/janko-m/vim-test.git

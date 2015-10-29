@@ -44,3 +44,16 @@ source ~/.vim/neocomplete.vim
 
 " neosnippet
 source ~/.vim/neosnippet.vim
+
+" vim-test
+let test#strategy = "dispatch"
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
+" Enable per project .vimrc (LEAVE AT END OF FILE)
+set exrc
+set secure
+
