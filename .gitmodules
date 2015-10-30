@@ -91,3 +91,9 @@
 [submodule "vim/.vim/bundle/vim-test"]
 	path = vim/.vim/bundle/vim-test
 	url = https://github.com/janko-m/vim-test.git
+[submodule "vim/.vim/bundle/vim-textobj-user"]
+	path = vim/.vim/bundle/vim-textobj-user
+	url = https://github.com/kana/vim-textobj-user.git
+[submodule "vim/.vim/bundle/vim-textobj-rubyblock"]
+	path = vim/.vim/bundle/vim-textobj-rubyblock
+	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
