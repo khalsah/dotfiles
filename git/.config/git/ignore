@@ -2,3 +2,4 @@
 *.swp
 .nvmrc
 .npmrc
+.lvimrc

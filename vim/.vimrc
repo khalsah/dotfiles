@@ -49,6 +49,5 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
-" Enable per project .vimrc (LEAVE AT END OF FILE)
-set exrc
-set secure
+let g:localvimrc_persistent = 1
+let g:localvimrc_persistence_file = expand('$HOME') . '/.vim/.localvimrc_persistent'
