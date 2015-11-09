@@ -97,3 +97,6 @@
 [submodule "vim/.vim/bundle/vim-textobj-rubyblock"]
 	path = vim/.vim/bundle/vim-textobj-rubyblock
 	url = https://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "vim/.vim/bundle/tagbar"]
+	path = vim/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
