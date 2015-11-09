@@ -24,6 +24,8 @@ set wildignore+=node_modules,bower_components,coverage
 
 set clipboard=unnamed
 
+set updatetime=750
+
 " CtrlP
 let g:ctrlp_show_hidden = 1
 
@@ -50,4 +52,3 @@ nmap <silent> <leader>g :TestVisit<CR>
 " Enable per project .vimrc (LEAVE AT END OF FILE)
 set exrc
 set secure
-
