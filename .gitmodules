@@ -103,6 +103,12 @@
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/.vim/bundle/vim-rake"]
+	path = vim/.vim/bundle/vim-rake
+	url = https://github.com/tpope/vim-rake.git
+[submodule "vim/.vim/bundle/vim-bundler"]
+	path = vim/.vim/bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
 [submodule "vim/.vim/bundle/vim-localvimrc"]
 	path = vim/.vim/bundle/vim-localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
