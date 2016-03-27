@@ -1,6 +1,57 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-runtime! plugin/sensible.vim
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+" Tpope
+Plugin 'tpope/vim-sensible'
+
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-tbone'
+Plugin 'tpope/vim-unimpaired'
+
+" Color Themes
+Plugin 'chriskempson/base16-vim'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Utilities
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-airline/vim-airline'
+
+" Languages
+Plugin 'digitaltoad/vim-jade'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mxw/vim-jsx'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-ruby/vim-ruby'
+
+" Misc
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+
+call vundle#end()
+filetype plugin indent on
 
 set expandtab
 set tabstop=2
@@ -9,9 +60,8 @@ set shiftwidth=2
 
 set number
 
-set t_Co=16
 set background=light
-colorscheme solarized
+colorscheme base16-solarized
 
 set mouse=a
 set spell
@@ -33,13 +83,14 @@ let g:ctrlp_show_hidden = 1
 let g:jsx_ext_required = 0
 
 " airline
+let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 
 " neocomplete
-source ~/.vim/neocomplete.vim
+" source ~/.vim/neocomplete.vim
 
 " neosnippet
-source ~/.vim/neosnippet.vim
+" source ~/.vim/neosnippet.vim
 
 " vim-test
 let test#strategy = "dispatch"
@@ -48,6 +99,3 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-
-let g:localvimrc_persistent = 1
-let g:localvimrc_persistence_file = expand('$HOME') . '/.vim/.localvimrc_persistent'
