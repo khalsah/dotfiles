@@ -60,6 +60,7 @@ set shiftwidth=2
 
 set number
 
+let base16colorspace=256
 set background=light
 colorscheme base16-solarized
 
