@@ -39,14 +39,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline'
 
 " Languages
-Plugin 'digitaltoad/vim-jade'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'groenewege/vim-less'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mxw/vim-jsx'
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'vim-ruby/vim-ruby'
+Plugin 'sheerun/vim-polyglot'
 
 " Misc
 Plugin 'kana/vim-textobj-user'
