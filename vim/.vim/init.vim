@@ -25,6 +25,8 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'kergoth/vim-hilinks'
+
 " Utilities
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bronson/vim-trailing-whitespace'
