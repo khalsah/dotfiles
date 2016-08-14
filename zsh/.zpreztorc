@@ -37,7 +37,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'node' \
   'ruby' \
-  'tmux'
+  'tmux' \
+  'gpg'
 
 #
 # Editor
