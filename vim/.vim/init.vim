@@ -59,7 +59,7 @@ set number
 
 let base16colorspace=256
 set background=light
-colorscheme base16-solarized
+colorscheme base16-solarized-light
 
 set mouse=a
 set spell
