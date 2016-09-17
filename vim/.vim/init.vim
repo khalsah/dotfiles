@@ -74,6 +74,13 @@ set clipboard=unnamed
 
 set updatetime=750
 
+set undodir=~/.vim/temp/undo//
+set backupdir=~/.vim/temp/backup//
+set directory=~/.vim/temp/swp//
+
+" For better file watching
+set backupcopy=yes
+
 " CtrlP
 let g:ctrlp_show_hidden = 1
 
