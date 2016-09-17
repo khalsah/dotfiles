@@ -81,6 +81,10 @@ set directory=~/.vim/temp/swp//
 " For better file watching
 set backupcopy=yes
 
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+
 " CtrlP
 let g:ctrlp_show_hidden = 1
 
