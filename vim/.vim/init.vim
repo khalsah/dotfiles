@@ -37,7 +37,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/syntastic'
+Plugin 'neomake/neomake'
 Plugin 'vim-airline/vim-airline'
 
 " Languages
@@ -95,16 +95,9 @@ let g:jsx_ext_required = 0
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 
-" neocomplete
-" source ~/.vim/neocomplete.vim
-
-" neosnippet
-" source ~/.vim/neosnippet.vim
-
-" vim-test
-let test#strategy = "dispatch"
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+" neomake
+autocmd! BufWritePost,BufEnter * Neomake
+let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
+let g:neomake_jsx_enabled_makers = ['eslint', 'flow']
+let g:neomake_javascript_flow_exe = substitute(system('npm bin'), '\n$', '', '') . '/flow'
+let g:neomake_javascript_eslint_exe = substitute(system('npm bin'), '\n$', '', '') . '/eslint'
