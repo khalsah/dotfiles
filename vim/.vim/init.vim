@@ -46,6 +46,8 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 
 call plug#end()
 
+inoremap jj <Esc>
+
 set expandtab
 set tabstop=2
 set softtabstop=2
