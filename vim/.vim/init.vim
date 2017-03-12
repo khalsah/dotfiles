@@ -68,8 +68,6 @@ set whichwrap+=<,>,h,l,[,]
 
 set wildignore+=node_modules,bower_components,coverage
 
-set clipboard=unnamed
-
 set updatetime=750
 
 set undodir=~/.vim/temp/undo//
