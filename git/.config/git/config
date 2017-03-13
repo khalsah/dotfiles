@@ -5,3 +5,6 @@
 	default = current
 [fetch]
 	prune = true
+
+[include]
+	path = local

@@ -3,3 +3,4 @@
 .nvmrc
 .npmrc
 .lvimrc
+.npm-debug.log
