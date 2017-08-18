@@ -34,8 +34,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'neomake/neomake'
 Plug 'vim-airline/vim-airline'
+Plug 'w0rp/ale'
 
 " Languages
 Plug 'sheerun/vim-polyglot'
@@ -91,9 +91,3 @@ let g:jsx_ext_required = 0
 " airline
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
-
-" neomake
-" autocmd! BufWritePost,BufEnter * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
-let g:neomake_javascript_flow_exe = substitute(system('npm bin'), '\n$', '', '') . '/flow'
-let g:neomake_javascript_eslint_exe = substitute(system('npm bin'), '\n$', '', '') . '/eslint'
