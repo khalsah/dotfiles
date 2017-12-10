@@ -56,9 +56,10 @@ set shiftwidth=2
 
 set number
 
-let base16colorspace=256
-set background=light
-colorscheme base16-solarized-light
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+end
 
 set mouse=a
 set spell
