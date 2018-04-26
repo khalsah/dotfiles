@@ -91,4 +91,3 @@ let g:jsx_ext_required = 0
 
 " airline
 let g:airline_theme='base16'
-let g:airline_powerline_fonts = 1
