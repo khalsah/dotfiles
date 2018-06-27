@@ -21,7 +21,7 @@ Plug 'tpope/vim-tbone'
 Plug 'tpope/vim-unimpaired'
 
 " Color Themes
-Plug 'chriskempson/base16-vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'kergoth/vim-hilinks'
@@ -56,10 +56,7 @@ set shiftwidth=2
 
 set number
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-end
+colorscheme nord
 
 set mouse=a
 set spell
@@ -88,6 +85,3 @@ let g:ctrlp_show_hidden = 1
 
 " jsx
 let g:jsx_ext_required = 0
-
-" airline
-let g:airline_theme='base16'

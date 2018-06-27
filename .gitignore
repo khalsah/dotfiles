@@ -2,4 +2,5 @@ git/.config/git/local
 vim/.vim/bundle
 vim/.vim/.netrwhist
 vim/.vim/temp
+tmux/.tmux/plugins
 .localvimrc_persistent
