@@ -38,7 +38,8 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'ruby' \
   'tmux' \
-  'gpg'
+  'gpg' \
+  'ssh'
 
 #
 # Editor
