@@ -11,3 +11,11 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+#
+#  Local Config
+#
+
+for file in ${HOME}/.zshrc.d/*; do
+  source "$file"
+done
