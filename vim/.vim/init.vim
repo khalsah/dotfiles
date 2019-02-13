@@ -111,3 +111,23 @@ let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+
+" ALE
+let g:ale_linters = {
+      \  'javascript': ['eslint', 'prettier'],
+      \  'typescript': ['tsserver', 'tslint', 'prettier'],
+      \  'css': ['prettier'],
+      \  'scss': ['prettier'],
+      \ }
+
+let g:ale_fixers = {
+      \ 'javascript': ['prettier'],
+      \ 'typescript': ['prettier'],
+      \ 'css': ['prettier'],
+      \ 'scss': ['prettier'],
+      \ }
+
+let g:ale_fix_on_save = 1
+
+" Switch between the last two files
+nnoremap <Leader><Leader> <C-^>
