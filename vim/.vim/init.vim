@@ -55,25 +55,20 @@ set shiftwidth=2
 
 set number
 
-" Fix highlighting for spell checks in terminal
-function! s:base16_customize() abort
-  " Colors: https://github.com/chriskempson/base16/blob/master/styling.md
-  " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
-  call Base16hi("SpellBad",   "", "", g:base16_cterm08, g:base16_cterm00, "", "")
-  call Base16hi("SpellCap",   "", "", g:base16_cterm0A, g:base16_cterm00, "", "")
-  call Base16hi("SpellLocal", "", "", g:base16_cterm0D, g:base16_cterm00, "", "")
-  call Base16hi("SpellRare",  "", "", g:base16_cterm0B, g:base16_cterm00, "", "")
-endfunction
+" Mode Specific Cursor
+let &t_SI.="\e[5 q" " INSERT mode => Bar
+let &t_SR.="\e[4 q" " REPLACE mode => Underscore
+let &t_EI.="\e[1 q" " NORMAL mode => Block
 
-augroup on_change_colorschema
-  autocmd!
-  autocmd ColorScheme * call s:base16_customize()
-augroup END
-
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
+" Enable True Color support in tmux
+if &term =~# 'tmux'
+      let &t_8f = "\e[38;2;%lu;%lu;%lum"
+      let &t_8b = "\e[48;2;%lu;%lu;%lum"
 endif
+
+
+set termguicolors
+colorscheme base16-tomorrow
 
 set mouse=a
 set spell
@@ -105,12 +100,6 @@ let g:jsx_ext_required = 0
 
 " Airline
 let g:airline_theme='base16'
-
-" mintty
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
 
 " ALE
 let g:ale_linters = {
