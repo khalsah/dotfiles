@@ -16,6 +16,6 @@ fi
 #  Local Config
 #
 
-for file in ${HOME}/.zshrc.d/*; do
+for file in ${HOME}/.zshrc.d/*(N); do
   source "$file"
 done
