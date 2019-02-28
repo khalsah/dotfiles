@@ -145,3 +145,10 @@ let g:ale_fix_on_save = 1
 
 " Switch between the last two files
 nnoremap <Leader><Leader> <C-^>
+
+" Hybrid line numbers in normal mode
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
+augroup END
