@@ -83,7 +83,11 @@ augroup on_change_colorschema
   autocmd ColorScheme base16-* call s:base16_customize()
 augroup END
 
-colorscheme base16-tomorrow
+if $SSH_CLIENT
+  colorscheme base16-tomorrow-night
+else
+  colorscheme base16-tomorrow
+endif
 
 set mouse=a
 set spell
