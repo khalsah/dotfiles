@@ -55,18 +55,13 @@ set shiftwidth=2
 
 set number
 
-" Mode Specific Cursor
-let &t_SI.="\e[5 q" " INSERT mode => Bar
-let &t_SR.="\e[4 q" " REPLACE mode => Underscore
-let &t_EI.="\e[1 q" " NORMAL mode => Block
-
 " Enable True Color support in tmux
 if &term =~# 'tmux'
-      let &t_8f = "\e[38;2;%lu;%lu;%lum"
-      let &t_8b = "\e[48;2;%lu;%lu;%lum"
+  let &t_8f = "\e[38;2;%lu;%lu;%lum"
+  let &t_8b = "\e[48;2;%lu;%lu;%lum"
 endif
 
-if &term =~# '256color'
+if $TERM =~# '256color'
   set termguicolors
 endif
 
@@ -78,11 +73,14 @@ function! s:base16_customize() abort
   call Base16hi("SpellCap",   g:base16_gui0A, g:base16_gui00, g:base16_cterm0A, g:base16_cterm00, "bold,undercurl", g:base16_gui0A)
   call Base16hi("SpellLocal",   g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "bold,undercurl", g:base16_gui0D)
   call Base16hi("SpellRare",   g:base16_gui0B, g:base16_gui00, g:base16_cterm0B, g:base16_cterm00, "bold,undercurl", g:base16_gui0B)
+
+  hi htmlItalic cterm=italic gui=italic
+  hi htmlBold cterm=bold gui=bold
 endfunction
 
 augroup on_change_colorschema
   autocmd!
-  autocmd ColorScheme * call s:base16_customize()
+  autocmd ColorScheme base16-* call s:base16_customize()
 augroup END
 
 colorscheme base16-tomorrow
