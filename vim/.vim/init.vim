@@ -55,27 +55,20 @@ set shiftwidth=2
 
 set number
 
-" Enable True Color support in tmux
-if &term =~# 'tmux'
-  let &t_8f = "\e[38;2;%lu;%lu;%lum"
-  let &t_8b = "\e[48;2;%lu;%lu;%lum"
-endif
-
-if $TERM =~# '256color'
-  set termguicolors
-endif
+set notermguicolors
 
 " Fix highlighting for spell checks in terminal
 function! s:base16_customize() abort
   " Colors: https://github.com/chriskempson/base16/blob/master/styling.md
   " Arguments: group, guifg, guibg, ctermfg, ctermbg, attr, guisp
-  call Base16hi("SpellBad",   g:base16_gui08, g:base16_gui00, g:base16_cterm08, g:base16_cterm00, "bold,undercurl", g:base16_gui08)
-  call Base16hi("SpellCap",   g:base16_gui0A, g:base16_gui00, g:base16_cterm0A, g:base16_cterm00, "bold,undercurl", g:base16_gui0A)
-  call Base16hi("SpellLocal",   g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "bold,undercurl", g:base16_gui0D)
-  call Base16hi("SpellRare",   g:base16_gui0B, g:base16_gui00, g:base16_cterm0B, g:base16_cterm00, "bold,undercurl", g:base16_gui0B)
+  call Base16hi("SpellBad",   g:base16_gui08, g:base16_gui00, g:base16_cterm08, g:base16_cterm00, "undercurl", g:base16_gui08)
+  call Base16hi("SpellCap",   g:base16_gui0A, g:base16_gui00, g:base16_cterm0A, g:base16_cterm00, "undercurl", g:base16_gui0A)
+  call Base16hi("SpellLocal",   g:base16_gui0D, g:base16_gui00, g:base16_cterm0D, g:base16_cterm00, "undercurl", g:base16_gui0D)
+  call Base16hi("SpellRare",   g:base16_gui0B, g:base16_gui00, g:base16_cterm0B, g:base16_cterm00, "undercurl", g:base16_gui0B)
 
   hi htmlItalic cterm=italic gui=italic
   hi htmlBold cterm=bold gui=bold
+  hi Statement cterm=bold gui=bold
 endfunction
 
 augroup on_change_colorschema
@@ -83,11 +76,7 @@ augroup on_change_colorschema
   autocmd ColorScheme base16-* call s:base16_customize()
 augroup END
 
-if $SSH_CLIENT
-  colorscheme base16-tomorrow-night
-else
-  colorscheme base16-tomorrow
-endif
+colorscheme base16-tomorrow
 
 set mouse=a
 set spell
