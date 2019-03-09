@@ -40,6 +40,7 @@ Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 
 " Misc
+Plug 'edkolev/tmuxline.vim'
 Plug 'godlygeek/tabular'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -115,6 +116,23 @@ let g:jsx_ext_required = 0
 " Airline
 let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = '│'
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = '│'
+let g:airline_skip_empty_sections = 1
+
+" Tmuxline
+let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux/tmuxline.conf"
+let g:tmuxline_powerline_separators = 0
+" let g:tmuxline_preset = 'crosshair'
+let g:tmuxline_separators = {
+      \ 'left': '',
+      \ 'left_alt': '│',
+      \ 'right': '',
+      \ 'right_alt': '│'
+      \ }
+
 
 
 " ALE
