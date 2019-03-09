@@ -56,8 +56,6 @@ set shiftwidth=2
 
 set number
 
-set notermguicolors
-
 " Fix highlighting for spell checks in terminal
 function! s:base16_customize() abort
   " Colors: https://github.com/chriskempson/base16/blob/master/styling.md
@@ -77,6 +75,7 @@ augroup on_change_colorschema
   autocmd ColorScheme base16-* call s:base16_customize()
 augroup END
 
+set background=light
 colorscheme base16-tomorrow
 
 set mouse=a
@@ -136,12 +135,8 @@ let g:tmuxline_separators = {
 
 
 " ALE
-let g:ale_linters = {
-      \  'javascript': ['eslint', 'prettier'],
-      \  'typescript': ['tsserver', 'tslint', 'prettier'],
-      \  'css': ['prettier'],
-      \  'scss': ['prettier'],
-      \ }
+imap <C-Space> <Plug>(ale_complete)
+imap <NUL> <Plug>(ale_complete)
 
 let g:ale_fixers = {
       \ 'javascript': ['prettier'],
