@@ -26,6 +26,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'kergoth/vim-hilinks'
 
 " Utilities
+Plug 'chrisbra/unicode.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'christoomey/vim-tmux-navigator'
@@ -124,15 +125,12 @@ let g:airline_skip_empty_sections = 1
 " Tmuxline
 let g:airline#extensions#tmuxline#snapshot_file = "~/.tmux/tmuxline.conf"
 let g:tmuxline_powerline_separators = 0
-" let g:tmuxline_preset = 'crosshair'
 let g:tmuxline_separators = {
       \ 'left': '',
       \ 'left_alt': '│',
       \ 'right': '',
       \ 'right_alt': '│'
       \ }
-
-
 
 " ALE
 imap <C-Space> <Plug>(ale_complete)
