@@ -1,6 +1,7 @@
 .localvimrc_persistent
 git/.config/git/local
 tmux/.tmux/plugins
+tmux/.tmux/tmuxline.conf
 vim/.vim/.netrwhist
 vim/.vim/autoload/plug.vim.old
 vim/.vim/bundle
