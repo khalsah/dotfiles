@@ -20,37 +20,34 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-tbone'
 Plug 'tpope/vim-unimpaired'
 
-" Color Themes
-Plug 'vim-airline/vim-airline-themes'
+" Color schemes and appearance
 Plug 'chriskempson/base16-vim'
 Plug 'kergoth/vim-hilinks'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Utilities
-Plug 'chrisbra/unicode.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'chrisbra/unicode.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'majutsushi/tagbar'
-Plug 'mattn/emmet-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'w0rp/ale'
+Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'kana/vim-textobj-user'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'nelstrom/vim-textobj-rubyblock'
 
-" Languages
+" Language support and integration
 Plug 'sheerun/vim-polyglot'
+Plug 'w0rp/ale'
 
 " Misc
 Plug 'edkolev/tmuxline.vim'
-Plug 'godlygeek/tabular'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
 
 call plug#end()
-
-inoremap jj <Esc>
 
 set expandtab
 set tabstop=2
@@ -103,18 +100,6 @@ set backupcopy=yes
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 
-" CtrlP
-let g:ctrlp_show_hidden = 1
-
-if executable('rg')
-  set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-endif
-
-" jsx
-let g:jsx_ext_required = 0
-
 " Airline
 let g:airline_theme = 'base16'
 let g:airline_powerline_fonts = 1
@@ -134,21 +119,34 @@ let g:tmuxline_separators = {
       \ 'right_alt': '│'
       \ }
 
+" FZF
+nnoremap <silent> <C-p> :FZF<CR>
+
 " ALE
-imap <C-Space> <Plug>(ale_complete)
-imap <NUL> <Plug>(ale_complete)
+nmap K <Plug>(ale_hover)
+nmap gd <Plug>(ale_go_to_definition)
 
-let g:ale_fixers = {
-      \ 'javascript': ['prettier'],
-      \ 'typescript': ['prettier'],
-      \ 'css': ['prettier'],
-      \ 'scss': ['prettier'],
-      \ }
-
+let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1
 
-" Switch between the last two files
-nnoremap <Leader><Leader> <C-^>
+let g:ale_c_parse_compile_commands = 1
+let g:ale_c_clangd_options = '-background-index'
+
+let g:ale_linters = {
+      \ 'c': ['clangd'],
+      \ 'javascript': ['eslint'],
+      \ 'typescript': ['eslint'],
+      \ 'ruby': ['rubocop', 'solargraph'],
+      \ }
+
+let g:ale_fixers = {
+      \ 'c': ['clang-format'],
+      \ 'css': ['prettier'],
+      \ 'scss': ['prettier'],
+      \ 'javascript': ['prettier'],
+      \ 'typescript': ['prettier'],
+      \ }
+
 
 " Hybrid line numbers in normal mode
 augroup numbertoggle
@@ -156,3 +154,10 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
+
+" Assume C not C++ in .h files
+let g:c_syntax_for_h = 1
+
+" Misc Mappings
+nnoremap <Leader><Leader> <C-^>
+inoremap jj <Esc>
