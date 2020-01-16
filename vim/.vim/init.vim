@@ -138,8 +138,10 @@ let g:ale_c_clangd_options = '-background-index'
 let g:ale_linters = {
       \ 'c': ['clangd'],
       \ 'javascript': ['eslint'],
-      \ 'typescript': ['eslint'],
+      \ 'typescript': ['eslint', 'tsserver'],
+      \ 'vue': ['eslint', 'vls'],
       \ 'ruby': ['rubocop', 'solargraph'],
+      \ 'rust': ['rls'],
       \ }
 
 let g:ale_fixers = {
@@ -148,6 +150,8 @@ let g:ale_fixers = {
       \ 'scss': ['prettier'],
       \ 'javascript': ['prettier'],
       \ 'typescript': ['prettier'],
+      \ 'vue': ['prettier'],
+      \ 'rust': ['rustfmt'],
       \ }
 
 
