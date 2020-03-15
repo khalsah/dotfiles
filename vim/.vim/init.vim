@@ -1,5 +1,7 @@
 set nocompatible
 
+let g:polyglot_disabled = ['markdown']
+
 call plug#begin('~/.vim/bundle')
 
 " Tpope
@@ -12,6 +14,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
