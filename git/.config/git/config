@@ -5,10 +5,9 @@
 	default = current
 [fetch]
 	prune = true
-
-[include]
-	path = local
 [tig "color"]
 	cursor = color7 color8
 	title-focus = black blue bold
 	title-blur = blue color11
+[include]
+	path = local
