@@ -123,7 +123,7 @@ let g:tmuxline_separators = {
       \ }
 
 " FZF
-nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 " ALE
 nmap K <Plug>(ale_hover)
@@ -139,9 +139,11 @@ let g:ale_linters = {
       \ 'c': ['clangd'],
       \ 'javascript': ['eslint'],
       \ 'typescript': ['eslint', 'tsserver'],
+      \ 'typescriptreact': ['eslint', 'tsserver'],
       \ 'vue': ['eslint', 'vls'],
       \ 'ruby': ['rubocop', 'solargraph'],
-      \ 'rust': ['rls'],
+      \ 'rust': ['analyzer'],
+      \ 'html': [],
       \ }
 
 let g:ale_fixers = {
@@ -150,8 +152,10 @@ let g:ale_fixers = {
       \ 'scss': ['prettier'],
       \ 'javascript': ['prettier'],
       \ 'typescript': ['prettier'],
+      \ 'typescriptreact': ['prettier'],
       \ 'vue': ['prettier'],
       \ 'rust': ['rustfmt'],
+      \ 'html': ['prettier'],
       \ }
 
 
