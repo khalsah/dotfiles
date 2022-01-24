@@ -2,7 +2,7 @@ autoload bashcompinit
 bashcompinit
 
 if [ -x "$(command -v brew)" ]; then
-  ASDF_DIR=$(brew --prefix asdf 2> /dev/null)
+  ASDF_DIR=$(brew --prefix asdf 2> /dev/null)/libexec
 elif [ -d "$HOME/.asdf" ]; then
   ASDF_DIR="$HOME/.asdf"
 fi
